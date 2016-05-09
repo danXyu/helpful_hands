@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+
+  .container.room-container
+    .room-videochat-wrapper
+      .video-preview-external#video-preview-external
+      .video-preview-local#video-preview-local
+
+    .room-draw-view
+      p.room-draw-title Drawing Board
+      canvas(id="draw")
+
+  script.
+    var accessToken="#{token}";
+    var roomID="#{roomID}";
+    var userID="#{userID}";
+
+  script(src='../../js/lib/paper-full.min.js')
+  script(src='../../js/lib/socket.io.min.js')
+  script(src='../../js/src/room.js')
+  script(type="text/paperscript", src="../../js/src/drawing.js", canvas="draw")

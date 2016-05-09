@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='csrf-token', content=_csrf)
+    title #{title} - Revolutionizing Education
+    != css('index')
+  body
+    include partials/flash
+    #particles-js
+
+    header.index-page
+      .container
+        img.index-page-logo(src='img/handslogo.png')
+
+        h1.index-title
+          | Helpful Hands
+        p.index-subtitle Seamlessly connecting the mentorship community
+
+        .row
+          a.btn.btn-primary.btn-lg.page-scroll.facebook-button(href='/auth/facebook')
+            i.fa.fa-facebook
+            | Sign in with Facebook
+
+    != js('index')

@@ -1,0 +1,276 @@
+@import "vendor/bootstrap/bootstrap";
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/bootstrap-social";
+@import "themes/modern";
+
+
+/***************/
+/* Scaffolding */
+/***************/
+
+html {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  height: 100% !important;
+}
+
+body {
+  width: 100%;
+  height: 100% !important;
+  padding-top: 50px;
+  font-family: "Avenir", Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+.everypage-body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0px;
+  margin: auto 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+/*****************/
+/* Navbar Styles */
+/*****************/
+
+.navbar-default {
+  background: #fff;
+}
+
+.navbar-nav img {
+  width: 30px;
+  height: 30px;
+  margin: -15px 15px -15px;
+}
+
+.navbar-nav input {
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.exit-button {
+  position: absolute;
+  display: none;
+  top: 0px;
+  margin-top: 12px;
+  left: 45%;
+  font-size: 20px;
+  width: 120px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(5, 175, 242, 0.5);
+}
+
+.visible {
+  display: inline-block;
+}
+
+.profile-pic {
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 1px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/******************************/
+/* Twilio Video Configuration */
+/******************************/
+
+.room-container {
+  height: inherit;
+  width: inherit;
+  padding: 0 0px;
+}
+
+.room-videochat-wrapper {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 65%;
+  display: inline-block;
+}
+
+.room-videochat-wrapper a {
+  position: absolute;
+  top: 20px;
+  left: 40%;
+  z-index: 1000;
+}
+
+.room-draw-view {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: 35%;
+  display: inline-block;
+  border-left: 1px solid rgba(5, 175, 242, 0.5);
+}
+
+#video-preview-external {
+  position: absolute;
+  left: 0px;
+  top: -35px;
+  height: 100%;
+  width: 100%;
+
+  video {
+    height: inherit;
+    width: inherit;
+    overflow: hidden;
+  }
+}
+
+#video-preview-local {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  right: 10px;
+  bottom: 70px;
+
+  video {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+.room-draw-title {
+  position: absolute;
+  display: block;
+  top: 10px;
+  margin-left: 125px;
+  margin-right: auto;
+  background: transparent;
+  font-size: 25px;
+}
+
+
+
+// Alerts
+// -------------------------
+
+.alert {
+  margin-top: 20px;
+}
+
+// Thumbnails
+// -------------------------
+
+.thumbnail {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0 0 5px #ccc, inset 0 0 0 #000;
+}
+
+// Font Icons
+// -------------------------
+
+.fa, [class^='ion-'] {
+  margin-right: 6px;
+}
+
+// .listing {
+//   background-color: teal;
+//   opacity: 0.8;
+//   width: 50%;
+// }
+
+#container {
+  overflow: hidden;
+  width: 1125px;
+  height: 100%;
+  margin: 20px auto;
+}
+
+/******************/
+/* Listing Styles */
+/******************/
+
+.listing {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(5, 175, 242, 0.7);
+  border-radius: 10px;
+  padding: 25px 5px;
+  margin-bottom: 20px;
+
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    z-index: 10;
+    background-color: white;
+    opacity: 0;
+    filter: alpha(opacity=1);
+  }
+
+  img {
+    height: 100px;
+    width: auto;
+    margin-left: 20px;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .listing-picture {
+    height: 100%;
+    border-right: 2px dotted rgba(5, 175, 242, 0.7);
+  }
+
+  .listing-user-profile {
+    padding: 0 40px;
+    height: 100px;
+  }
+
+  .listing-info {
+    height: 100px;
+    padding: 0 40px;
+    border-left: 2px dotted rgba(5, 175, 242, 0.7);
+  }
+
+  .listing-left, .listing-right {
+    display: inline-block;
+  }
+
+  .listing-right {
+    float: right;
+  }
+
+  .listing-description {
+    float: left;
+    width: 100%;
+    border-left: 2px solid #f1c40f;
+    padding-left: 15px;
+  }
+
+  .listing-error {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 550px;
+    font-size: 25px;
+  }
+}
+
+.post-rating {
+  margin: 5px auto 30px;
+  text-align: center;
+}

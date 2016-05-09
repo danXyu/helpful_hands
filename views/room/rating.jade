@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  .container
+    h2.mentee-page-header
+      | Rate Your Interaction!
+
+    .post-rating
+
+    .form-group
+      label(class='col-sm-2 control-label', for='description') Leave Feedback
+      .col-sm-8
+        textarea.form-control(type='text', name='description', id='description', rows='5')
+    .form-group
+      .col-sm-offset-2.col-sm-8.downer
+        button.btn.btn-primary#gotonext
+          i.fa.fa-code
+          | Submit Feedback

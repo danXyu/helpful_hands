@@ -1,0 +1,29 @@
+{
+  "name": "helpfulhands",
+  "version": "0.2.0",
+  "description": "An app that allow for community volunteering",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.0.0"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:danXyu/helpful_hands.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Dan Yu",
+  "contributors": [
+    "Dan Yu <danyu1996@gmail.com> (http://danyu.me)"
+  ],
+  "license": "MIT"
+}
+

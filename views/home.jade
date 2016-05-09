@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .container
+    #container
+      - var allListings = JSON.parse(listings)
+
+      if allListings.length > 0
+        each listing in allListings
+          .col-md-12.listing
+            a(href='/room/' + listing.roomID)
+
+            .col-md-2.listing-picture
+              img.profile-pic(src='#{listing.profile.picture}')
+            .col-md-4.listing-user-profile
+              .row
+                p.listing-left #{listing.profile.name}
+                p.listing-right (Handful Rating: #{listing.profile.rating})
+              .row
+                p.listing-user #{listing.profile.tagline}
+            .col-md-6.listing-info
+              .row
+                p.listing-left #{listing.title}
+                p.listing-right Date Created: #{listing.dateCreated}
+              .row
+                p.listing-description #{listing.tagline}
+      else
+        .col-md-12.listing
+          .row
+            p.listing-error Looks like there's no listings yet. Create one by going to the dropdown menu in the top right!
